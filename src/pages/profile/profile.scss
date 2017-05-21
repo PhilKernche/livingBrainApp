@@ -1,3 +1,23 @@
 page-profile {
-
+    .item {
+        margin-left: 20px;
+        width: 85%;
+        .label {
+            width: 50px;
+        }
+    }
+    ion-icon {
+        width: 15px;
+        margin-right: 8px;
+    }
+    ion-card {
+        padding-bottom: 20px;
+    }
+    .button {
+        display: block;
+        margin: 80px auto;
+        width: 50%;
+        height: 50px;
+        max-width: 410px;
+    }
 }

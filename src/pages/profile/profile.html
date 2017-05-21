@@ -1,18 +1,57 @@
-<!--
-  Generated template for the Profile page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>profile</ion-title>
-  </ion-navbar>
-
+    <ion-navbar color="primary" hideBackButton="true">
+        <ion-title>Profile</ion-title>
+    </ion-navbar>
 </ion-header>
 
+<div class="logo">
+    <img src="assets/images/logo-icon.png" alt="logo">
+</div>
 
 <ion-content padding>
+    <!--Box 1 -->
+    <ion-card class="card">
+        <ion-card-header>Settings</ion-card-header>
+
+        <ion-list>
+            <!--Item 1 -->
+            <ion-item class="item">
+                <ion-label class="label" color="dark">Name: </ion-label>
+                <ion-input placeholder="TestUsername" item-right readonly [(ngModel)]="patient.PatientName"></ion-input>
+            </ion-item>
+
+            <!--Item 2 -->
+            <ion-item class="item">
+                <ion-label class="label" color="dark">Age: </ion-label>
+                <ion-input (change)="submit()" type="number" [(ngModel)]="patient.Age" placeholder="Your age" item-right></ion-input>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+
+
+    <!--Box 2 -->
+    <ion-card>
+        <ion-card-header>Entry Method</ion-card-header>
+        <ion-list radio-group [(ngModel)]="patient.EntryType">
+            <ion-item class="item">
+                <ion-label>
+                    <ion-icon name="mic"></ion-icon>
+                    Voice
+                </ion-label>
+                <ion-radio (ionSelect)="submit()" mode="md" value="0"></ion-radio>
+            </ion-item>
+            <ion-item class="item">
+
+                <ion-label>
+                    <ion-icon name="create"></ion-icon>
+                    Typing
+                </ion-label>
+                <ion-radio (ionSelect)="submit()" mode="md" value="1"></ion-radio>
+            </ion-item>
+
+        </ion-list>
+    </ion-card>
+
+    <button ion-button *ngIf="firstStart" (tap)="submit(true)">Submit</button>
 
 </ion-content>

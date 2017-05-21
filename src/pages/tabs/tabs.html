@@ -1,5 +1,5 @@
-<ion-tabs>
-    <ion-tab tabIcon="home" [root]="tab1Root"></ion-tab>
-    <ion-tab tabIcon="stats" [root]="tab2Root"></ion-tab>
+<ion-tabs [color]="'primary'">
+    <ion-tab tabIcon="home" [root]="tab1Root" tabsHideOnSubPages="true"></ion-tab>
+    <ion-tab tabIcon="stats" [root]="tab2Root" [enabled]="false"></ion-tab>
     <ion-tab tabIcon="person" [root]="tab3Root"></ion-tab>
 </ion-tabs>

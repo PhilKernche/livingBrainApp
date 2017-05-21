@@ -3,7 +3,7 @@
 </ion-header>
 
 <ion-content padding>
-    <!--<chart class="chart" [labels]="labels" [data]="data" type="line"></chart>
--->
-    <button></button>
+    <chart #mChart class="chart" [labels]="labels" [data]="data" type="line"></chart>
+
+    <button ion-button (tap)="startClicked()">Start</button>
 </ion-content>

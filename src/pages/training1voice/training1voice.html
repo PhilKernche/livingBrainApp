@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar color="primary" hideBackButton="true">
+        <ion-title>Exercise 1: Flourish</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="row">
+        <div class="timer" (tap)="clockClicked()">
+            <span><ion-icon name="time"></ion-icon></span>
+            <span [class.redTimer]="timerRed" class="clock">{{time}}</span>
+        </div>
+        <button class="questionButton" ion-button icon-only outline (click)="helpClicked()">
+            <ion-icon name="help"></ion-icon>
+        </button>
+    </div>
+    <hr>
+
+    <div class="letters">
+        <div class="letter">
+            <span *ngFor="let letter of letters">{{letter}}</span>...
+        </div>
+    </div>
+
+    <h4 [class.fail]="wordFailure" [class.success]="wordSuccess" *ngIf="wordCount===1">{{wordCount}} word found!</h4>
+    <h4 [class.fail]="wordFailure" [class.success]="wordSuccess" *ngIf="wordCount!==1">{{wordCount}} words found!</h4>
+
+    <button ion-button (tap)="startRecord()">Next word</button>
+
+</ion-content>
+
+<div class="logo">
+    <img src="assets/images/logo-icon.png" alt="logo">
+</div>

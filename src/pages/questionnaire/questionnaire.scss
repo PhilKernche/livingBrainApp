@@ -1,3 +1,53 @@
 page-questionnaire {
-
+    .explanation {
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto 20px auto;
+        font-size: 1.5em;
+    }
+    .question {
+        width: 100%;
+        max-width: 455px;
+        margin: 0 auto 20px auto;
+        padding-bottom: 20px;
+    }
+    .options {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .labels {
+        position: relative;
+        font-size: 90%;
+        .answerLow {
+            position: absolute;
+            left: 0;
+        }
+        .answerHigh {
+            position: absolute;
+            right: 0;
+        }
+    }
+    .start-button {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 6px;
+        border: none;
+        box-shadow: none;
+    }
+    .logo {
+        position: absolute;
+        right: 0;
+        top: -0px;
+        height: $toolbar-md-height;
+        width: $toolbar-md-height;
+        background: white;
+        z-index: 1000;
+        padding-top: 4px;
+        img {
+            transform: scale(0.8)
+        }
+    }
 }

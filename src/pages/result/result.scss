@@ -1,3 +1,64 @@
 page-result {
-
+    ion-navbar {
+        &:after {
+            content: '';
+            border-bottom: 2px solid color($colors, secondary, base);
+            position: absolute;
+            display: block;
+            left: -4px;
+            top: 54px;
+            width: 20%;
+            animation: slide-in 1000ms ease forwards;
+        }
+    }
+    .space {
+        width: 100%;
+        height: 10px;
+    }
+    .progress {
+        position: absolute;
+        left: 0;
+        top: 55px;
+        font-size: 80%;
+        color: color($colors, secondary, base);
+        animation: slide-in 1000ms 200ms ease forwards;
+    }
+    @keyframes slide-in {
+        0% {
+            left: -200px;
+        }
+        100% {
+            left: 0;
+        }
+    }
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+    .logo {
+        position: absolute;
+        right: 0;
+        height: $toolbar-md-height;
+        width: $toolbar-md-height;
+        background: white;
+        z-index: 1000;
+        padding-top: 4px;
+        img {
+            transform: scale(0.8)
+        }
+    }
+    .start-button {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 6px;
+        border: none;
+        box-shadow: none;
+    }
+    .chart {
+        width: 100%;
+        max-width: 455px;
+        margin: 0 auto 20px auto;
+    }
 }
